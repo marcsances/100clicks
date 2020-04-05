@@ -33,12 +33,12 @@ function step() {
     }
     const k = parseInt(Math.random() * 10);
     console.log(k);
-    if (k != 3 && k != 6) {
+    if (k <= 3 || k > 6) {
         d = n;
-    } else if (k == 3) {
-        d = n - parseInt(Math.random() * 20);
-    } else if (k == 6) {
-        d = n + parseInt(Math.random() * 20);
+    } else if (k <= 5) {
+        d = n - parseInt(Math.random() * 5);
+    } else if (k > 5) {
+        d = n + parseInt(Math.random() * 5);
     }
     document.getElementById("display").innerText = d;
 }
