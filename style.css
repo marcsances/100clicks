@@ -2,6 +2,14 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     line-height: 20px;
+    background: #333333;
+    color: #ffffff;
+}
+
+button {
+    background: #555555;
+    color: #ffffff;
+    border: none;
 }
 
 .hidden {

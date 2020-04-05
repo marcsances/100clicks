@@ -25,7 +25,7 @@ function init(inf) {
         document.getElementById("buttonContainer").className = "";
         document.getElementById("n").innerText = "1";
         document.getElementById("over").className = "hidden";
-        document.getElementById("over").innerText = "Game Over:";
+        document.getElementById("over").innerHTML = "Game Over:&nbsp;";
 
 
     }
@@ -86,7 +86,7 @@ function gameOver() {
 
 function victory() {
     isInit = false;
-    document.getElementById("over").innerText = "You Win:";
+    document.getElementById("over").innerHTML = "You Win:&nbsp;";
     document.getElementById("over").className = "";
     window.clearTimeout(handler);
 }
