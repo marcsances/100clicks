@@ -12,6 +12,11 @@ button {
     border: none;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .hidden {
     display: none !important;
 }

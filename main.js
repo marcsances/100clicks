@@ -26,8 +26,6 @@ function init(inf) {
         document.getElementById("n").innerText = "1";
         document.getElementById("over").className = "hidden";
         document.getElementById("over").innerHTML = "Game Over:&nbsp;";
-
-
     }
     
 }
