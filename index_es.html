@@ -15,7 +15,7 @@
             <p>Si el número que se ve es el que toca en la secuencia, pulsa "=".</p>
             <p>Sin embargo, ¡en algunos momentos te cambiaremos el número por uno fuera de la secuencia!</p>
             <p>En ese caso, si el número es menor del que toca, pulsa "&lt;", si es mayor, pulsa "&gt;". ¡La secuencia continúa!</p>
-            <small>Version 0.1.7 - Copyright (c) 2020, Marc Sances - <a href="https://opensource.org/licenses/BSD-3-Clause">License</a></small>
+            <small>Version 0.1.8 - Copyright (c) 2020, Marc Sances - <a href="https://opensource.org/licenses/BSD-3-Clause">License</a></small>
         </div>
         <div id="playButtons">
         <button id="play" onclick="init(2)">Modo Tutorial</button>
@@ -46,7 +46,8 @@
         </button>
         </div>
         <div id="again" class="hidden">
-            <button id="againBtn" onclick="init()">De nuevo</button>
+            <button id="againBtn" onclick="init(0)">De nuevo</button>
+            <button id="menuBtn" onclick="menu()">Menú</button>
         </div>
     </div>
 </body>
