@@ -79,7 +79,7 @@ a {
 }
 
 #play {
-    width: 45vw;
+    width: 25vw;
     font-size: 96px;
 }
 
@@ -90,7 +90,11 @@ a {
     font-size: 96px;
 }
 
-#againBtn {
+.hint {
+    background-color: #339933;
+}
+
+#againBtn, #menuBtn {
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -100,7 +104,7 @@ a {
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    width: 95vw;
+    width: 45vw;
     height: 33vh;
     font-size: 96px;
 }
