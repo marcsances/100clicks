@@ -3,6 +3,7 @@ var n = 1;
 var d = 1;
 var time;
 var handler;
+var infinite = false;
 
 function timer() {
     document.getElementById("timer").innerText = ((new Date() - time) / 1000);
@@ -10,9 +11,10 @@ function timer() {
 }
 
 
-function init() {
+function init(inf) {
     if (!isInit) {
         isInit = true;
+        infinite = inf;
         n = 1;
         d = 1;
         time = new Date();
@@ -21,18 +23,21 @@ function init() {
         document.getElementById("again").className = "hidden";
         document.getElementById("game").className = "";
         document.getElementById("buttonContainer").className = "";
-        document.getElementById("display").innerText = "1";
+        document.getElementById("n").innerText = "1";
+        document.getElementById("over").className = "hidden";
+        document.getElementById("over").innerText = "Game Over:";
+
+
     }
     
 }
 
 function step() {
     n = n + 1;
-    if (n == 100) {
+    if (n == 100 && !infinite) {
         return victory();
     }
     const k = parseInt(Math.random() * 10);
-    console.log(k);
     if (k <= 3 || k > 6) {
         d = n;
     } else if (k <= 5) {
@@ -40,7 +45,7 @@ function step() {
     } else if (k > 5) {
         d = n + parseInt(Math.random() * 5);
     }
-    document.getElementById("display").innerText = d;
+    document.getElementById("n").innerText = d;
 }
 
 function lower() {
@@ -72,7 +77,8 @@ function higher() {
 
 function gameOver() {
     isInit = false;
-    document.getElementById("display").innerText = "Game Over";
+    document.getElementById("n").innerText = n;
+    document.getElementById("over").className = "";
     document.getElementById("buttonContainer").className = "hidden";
     document.getElementById("again").className = "";
     window.clearTimeout(handler);
@@ -80,6 +86,7 @@ function gameOver() {
 
 function victory() {
     isInit = false;
-    document.getElementById("display").innerText = "You Win";
+    document.getElementById("over").innerText = "You Win:";
+    document.getElementById("over").className = "";
     window.clearTimeout(handler);
 }

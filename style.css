@@ -36,6 +36,15 @@ body {
 
 #display {
     font-size: 130px;
+    line-height: 240px;
+}
+
+#n, #over {
+    display: inline-block;
+}
+
+#over {
+    font-size: 96px;
 }
 
 #timer, #display, #buttonContainer, #message, #play {
@@ -57,7 +66,7 @@ body {
 }
 
 #play {
-    width: 95vw;
+    width: 45vw;
     font-size: 96px;
 }
 
