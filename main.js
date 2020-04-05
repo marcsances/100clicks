@@ -6,7 +6,7 @@ var handler;
 
 function timer() {
     document.getElementById("timer").innerText = ((new Date() - time) / 1000);
-    handler = setTimeout(timer, 1);
+    handler = setTimeout(timer, 10);
 }
 
 
@@ -16,7 +16,7 @@ function init() {
         n = 1;
         d = 1;
         time = new Date();
-        handler = setTimeout(timer, 1);
+        handler = setTimeout(timer, 10);
         document.getElementById("instructions").className = "hidden";
         document.getElementById("again").className = "hidden";
         document.getElementById("game").className = "";
