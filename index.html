@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>100 Clicks</title>
+    <script src="main.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="instructions">
+        <div id="message">
+            <h1>100 Clicks</h1>
+            <h2>Instructions</h2>
+            <p>Count from 1 to 100 as fast as you can!</p>
+            <p>If the number displayed is the expected in the sequence, press "=".</p>
+            <p>If the number is lower than expected, press "&lt;".</p>
+            <p>If the number is higher than expected, press "&gt;".</p>
+            <small>Version 0.1.1 - Copyright (c) 2020, Marc Sances - <a href="https://opensource.org/licenses/BSD-3-Clause">License</a></small>
+        </div>
+        <button id="play" onclick="init()">Play</button>
+    </div>
+    <div id="game" class="hidden">
+        <div id="timer">
+            
+        </div>
+        <div id="display">
+            1
+        </div>
+        <div id="buttonContainer">
+        <button id="lower" onclick="lower()">
+            &lt;
+        </button>
+        <button id="same" onclick="same()">
+            =
+        </button>
+        <button id="lower" onclick="higher()">
+            &gt;
+        </button>
+        </div>
+        <div id="again" class="hidden">
+            <button id="againBtn" onclick="init()">Again</button>
+        </div>
+    </div>
+</body>
+</html>
