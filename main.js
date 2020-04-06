@@ -5,6 +5,8 @@ var time;
 var handler;
 var infinite = false;
 var tutorial = false;
+var ok_aud = new Audio('ok.wav');
+var fail_aud = new Audio('fail.wav');
 
 function timer() {
     document.getElementById("timer").innerText = (!tutorial ? (new Date() - time) / 1000 : n);
@@ -39,6 +41,8 @@ function init(mode) {
 }
 
 function step() {
+    ok_aud.play();
+    window.navigator.vibrate(50);
     n = n + 1;
     if (n == 100 && !infinite) {
         return victory();
@@ -97,6 +101,8 @@ function higher() {
 }
 
 function gameOver() {
+    window.navigator.vibrate(300);
+    fail_aud.play();
     isInit = false;
     document.getElementById("n").innerText = n;
     document.getElementById("over").className = "";
@@ -122,3 +128,23 @@ function menu() {
     document.getElementById("over").className = "hidden";
     document.getElementById("over").innerHTML = "Game Over:&nbsp;";
 }
+
+function keyboard(e) {
+    switch (e.code) {
+        case "ArrowDown":
+        case "ArrrowUp":
+            same();
+            break;
+        case "ArrowLeft":
+            lower();
+            break;
+        case "ArrowRight":
+            higher();
+            break;
+        case "Enter":
+            init(-1);
+            break;
+    }
+}
+
+document.onkeydown = keyboard;
