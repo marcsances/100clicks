@@ -35,6 +35,9 @@ function init(mode) {
         document.getElementById("lower").className = "";
         document.getElementById("same").className = "";
         document.getElementById("higher").className = "";
+        document.getElementById("lower").onclick = lower;
+        document.getElementById("higher").onclick = higher;
+        document.getElementById("same").onclick = same;
         if (tutorial) document.getElementById("same").className = "hint";
     }
     
@@ -73,7 +76,8 @@ function step() {
     document.getElementById("n").innerText = d;
 }
 
-function lower() {
+function lower(e) {
+    if (!e.screenX) return;
     init();
     if (d < n) {
         step();
@@ -82,7 +86,8 @@ function lower() {
     }
 }
 
-function same() {
+function same(e) {
+    if (!e.screenX) return;
     init();
     if (d == n) {
         step();
@@ -91,7 +96,8 @@ function same() {
     }
 }
 
-function higher() {
+function higher(e) {
+    if (!e.screenX) return;
     init();
     if (d > n) {
         step();
