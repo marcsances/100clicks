@@ -15,8 +15,10 @@ function timer() {
 function init(mode) {
     if (!isInit) {
         isInit = true;
-        infinite = (mode == 1);
-        tutorial = (mode == 2);
+        if (mode != -1) {
+            infinite = (mode == 1);
+            tutorial = (mode == 2);
+        }
         n = 1;
         d = 1;
         time = new Date();
