@@ -1,7 +1,7 @@
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 2vh;
+    line-height: 3vh;
     background: #333333;
     color: #ffffff;
 }
@@ -47,6 +47,10 @@ a {
     height: 95vh;
 }
 
+#playButtons button {
+    font-size: 36px;
+}
+
 #display {
     font-size: 130px;
     line-height: 240px;
@@ -77,12 +81,6 @@ a {
 #message {
     height: 66vh;
 }
-
-#play {
-    width: 25vw;
-    font-size: 96px;
-}
-
 
 #lower, #same, #higher {
     width: 30vw;
