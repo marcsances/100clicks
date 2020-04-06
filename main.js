@@ -139,13 +139,13 @@ function keyboard(e) {
     switch (e.code) {
         case "ArrowDown":
         case "ArrrowUp":
-            same();
+            same({screenX:12});
             break;
         case "ArrowLeft":
-            lower();
+            lower({screenX:12});
             break;
         case "ArrowRight":
-            higher();
+            higher({screenX:12});
             break;
         case "Enter":
             init(-1);
