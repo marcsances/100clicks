@@ -138,7 +138,7 @@ function menu() {
 function keyboard(e) {
     switch (e.code) {
         case "ArrowDown":
-        case "ArrrowUp":
+        case "ArrowUp":
             same({screenX:12});
             break;
         case "ArrowLeft":
